@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No? But I Know! ❤️</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #ff4d6d, #ff9a9e);
+            color: #fff;
+            padding: 20px;
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 70px; /* Increased font size */
+            color: yellow;
+            animation: fly 2s infinite alternate;
+        }
+        p {
+            font-size: 28px; /* Increased font size for the paragraph */
+        }
+        @keyframes fly {
+            from { transform: translateY(0); }
+            to { transform: translateY(-10px); }
+        }
+        .hidden { display: none; }
+        .emoji {
+            position: absolute;
+            bottom: -50px;
+            font-size: 40px;
+            animation: float 5s linear infinite;
+        }
+        @keyframes float {
+            from { transform: translateY(100vh); }
+            to { transform: translateY(-100vh); }
+        }
+    </style>
+    <script>
+        function revealMessage() {
+            document.getElementById('hiddenText').classList.remove('hidden');
+            setTimeout(createFlyingEmojis, 2000);
+        }
+        function createFlyingEmojis() {
+            const emojis = ["❤️", "🎈", "🎂"];
+            for (let i = 0; i < 20; i++) {
+                let emoji = document.createElement('div');
+                emoji.className = 'emoji';
+                emoji.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+                emoji.style.left = Math.random() * 100 + "vw";
+                emoji.style.animationDuration = Math.random() * 3 + 2 + "s";
+                document.body.appendChild(emoji);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>I Know Babe, Your No Means Yes ❤️</h1>
+    <p>"Kyunki tumhare na mein bhi haan hai, tumhare gusse mein bhi pyaar hai" 💖</p>
+    <button onclick="revealMessage()">Click to See More</button>
+    
+    <div id="hiddenText" class="hidden">
+        <h1>HAPPY BIRTHDAY, MY PRINCESS! 🎉🎈</h1>
+        <p>I LOVE YOU FOREVER! ❤️</p>
+    </div>
+</body>
+</html>
