@@ -11,8 +11,9 @@
             background: linear-gradient(to right, #ff4d6d, #ff9a9e);
             color: #fff;
             padding: 20px;
-            overflow: auto; /* Allow scrolling */
-            height: 100vh; /* Take full screen height */
+            min-height: 100vh; /* Ensure the body takes full height of the screen */
+            overflow-y: auto; /* Allow vertical scrolling */
+            position: relative; /* Make sure the position of elements is properly relative */
         }
         h1 {
             font-size: 8vw; /* Responsive font size */
@@ -46,6 +47,18 @@
             p {
                 font-size: 5vw; /* Make paragraph text smaller for mobile */
             }
+        }
+
+        /* Make sure the button and content take enough space and are not cut off */
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #ff9a9e;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
         }
     </style>
     <script>
